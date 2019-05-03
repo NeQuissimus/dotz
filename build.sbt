@@ -10,5 +10,12 @@ scalacOptions in ThisBuild := Seq(
 lazy val kernel = project
   .in(file("kernel"))
   .settings(
-    name := "dotz-kernel",
+    name := "dotz-kernel"
   )
+
+lazy val data = project
+  .in(file("data"))
+  .settings(
+    name := "dotz-data"
+  )
+  .dependsOn(kernel)

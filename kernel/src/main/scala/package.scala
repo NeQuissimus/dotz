@@ -5,6 +5,8 @@ package object dotz {
 
   type implicitNotFound = scala.annotation.implicitNotFound
 
+  inline def the[T](implicit x: T): x.type = x
+
   val ??? = scala.Predef.???
 }
 
